@@ -51,4 +51,5 @@ jobs:
           ldflags: "-s -w"
           extra_files: README.md
           release_tag: wopr
+          release_name: wopr
           overwrite: true

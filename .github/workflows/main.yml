@@ -44,3 +44,4 @@ jobs:
           binary_name: "wopr"
           ldflags: "-s -w"
           extra_files: README.md
+          release_tag: wopr

@@ -45,3 +45,4 @@ jobs:
           ldflags: "-s -w"
           extra_files: README.md
           release_tag: wopr
+          overwrite: true

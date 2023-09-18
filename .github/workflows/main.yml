@@ -35,6 +35,12 @@ jobs:
       - name: Test
         run: go test -v ./...
 
+      - name: Bump version and push tag
+        uses: laputansoft/github-tag-action@v4.6
+        with:
+          github_token: ${{ env.github-token }}
+          tag: wopr
+
       - uses: wangyoucao577/go-release-action@v1.40
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

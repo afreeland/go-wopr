@@ -398,8 +398,7 @@ func greeting(msgr Messenger) {
 	bumpLine(msgr, 2)
 
 	if msgr.ScanSupport() {
-		var greetings string
-		fmt.Scanln(&greetings)
+		greetings := scan()
 		handleInput(msgr, GREETING, greetings)
 	}
 }
@@ -411,8 +410,7 @@ func wellbeing(msgr Messenger) {
 	bumpLine(msgr, 2)
 
 	if msgr.ScanSupport() {
-		var feeling string
-		fmt.Scanln(&feeling)
+		feeling := scan()
 		handleInput(msgr, WELLBEING, feeling)
 	}
 }
@@ -426,8 +424,7 @@ func explanation(msgr Messenger) {
 	bumpLine(msgr, 2)
 
 	if msgr.ScanSupport() {
-		var explanation string
-		fmt.Scanln(&explanation)
+		explanation := scan()
 		handleInput(msgr, EXPLANATION, explanation)
 	}
 }
@@ -513,6 +510,7 @@ func globalThermoNuclearWar(msgr Messenger) {
 
 	if msgr.ScanSupport() {
 		_ = scan()
+		handleInput(msgr, GLOBAL_THERMONOCULEAR_WAR, "")
 	}
 
 }
@@ -535,7 +533,7 @@ func strikeCommands(msgr Messenger) {
 
 	if msgr.ScanSupport() {
 		city := scan()
-		handleInput(msgr, STRIKE_COMMAND_2, city)
+		handleInput(msgr, STRIKE_COMMAND, city)
 	}
 }
 
@@ -544,6 +542,7 @@ func strikeCommandDos(msgr Messenger) {
 	bumpLine(msgr)
 	if msgr.ScanSupport() {
 		city := scan()
+
 		//TODO update LOGON to next step once ready =)
 		handleInput(msgr, LOGON, city)
 	}

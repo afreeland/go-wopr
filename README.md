@@ -97,3 +97,41 @@ TODO
 - Websocket/html implementation for anyone wanting to host
 - Sound effects to match movie "Shall we play a game?"
 - ChatGPT variant for chatting with.  Could be semi-scripted or prompt that is "aware of game"
+
+
+Buid Dockerfile
+-----
+
+### From Docker Hub
+#### pull from docker hub
+```
+docker pull afreeland/go-wopr@latest
+```
+#### run in console mode
+```
+docker run -it afreeland/go-wopr@latest
+```
+
+#### run in network mode
+```
+docker run afreeland/go-wopr@latest --server
+```
+
+### From Code
+
+#### build from code
+```
+# Build the Docker image with the default port (2000)
+docker build -t wopr .
+```
+
+#### run as console
+```
+# Run the Docker container with the default port (2000) and without the --server flag
+docker run -it wopr
+```
+
+### run as server
+```
+docker run -p 2000:2000 wopr --server
+```

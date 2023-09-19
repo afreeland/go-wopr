@@ -51,7 +51,11 @@ There are currently two ways in which you can use this
 This allows you to interact with it from command line by simply running the binary  
 ```
 ./wopr
-```  
+```
+
+
+https://github.com/afreeland/go-wopr/assets/3135030/3edc0a15-de28-4055-a2e0-26ec4f8a2e68
+
 
 ### Networking Mode
 This allows you to interact with it by actually connecting to it over TCP port 2000 by default.
@@ -66,6 +70,10 @@ Then open another terminal and utilize something like netcat or telnet.
 ```
 nc localhost 2000
 ```
+
+https://github.com/afreeland/go-wopr/assets/3135030/dd7a77c6-7806-4d9b-9fb4-062ee6035d3b
+
+
 
 ## How To
 The WOPR will go through its self identification phase and then prompt user with a logon
